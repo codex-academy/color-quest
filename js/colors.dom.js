@@ -40,27 +40,32 @@ addBtn.addEventListener("click", function () {
 
 filterBtn.addEventListener("click", function () {
 
-	const theShapes = document
-		.querySelectorAll(".shape");
+	const theShapes = document.querySelectorAll(".shape");
+
 	const currentSelectedColor = selectColor.value;
+	const currentSelectedNumber = selectNumber.value;
+
+	alert(currentSelectedColor);
+	alert(currentSelectedNumber);
 
 	// showAll
-	for (var i = 0; i < theShapes.length; i++) {
-		var currentShape = theShapes[i];
-		currentShape.classList.remove("hidden");
-	}
+	// for (var i = 0; i < theShapes.length; i++) {
+	// 	var currentShape = theShapes[i];
+	// 	currentShape.classList.remove("hidden");
+	// }
 
 	// ensure a color value is selected
-	if (currentSelectedColor !== "") {
-		// filter
-		for (var i = 0; i < theShapes.length; i++) {
-			var currentShape = theShapes[i];
-			// check if my current shape is the color that's selected in the dropdown
-			if (!currentShape.classList.contains(currentSelectedColor)) {
-				currentShape.classList.add("hidden");
-			}
-		}
-	}
+	// if (currentSelectedColor !== "") {
+	// 	// filter
+	// 	for (var i = 0; i < theShapes.length; i++) {
+	// 		var currentShape = theShapes[i];
+	// 		// check if my current shape is the color that's selected in the dropdown
+	// 		if (!currentShape.classList.contains(currentSelectedColor)) {
+	// 			currentShape.classList.add("hidden");
+	// 		}
+	// 	}
+	// }
+
 });
 
 
